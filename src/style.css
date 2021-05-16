@@ -1,0 +1,121 @@
+html {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  background-color: #274D6D;
+  color: white;
+  font-family: sans-serif;
+}
+h1, h2 {
+  text-align: center;
+  padding-bottom: 1.5rem;
+  margin: 3rem 0;
+  border-bottom: 5px dotted #547EA1;
+}
+
+/* Budoucí komponenta ShoppingList */
+.seznam {
+  margin: 2rem auto;
+}
+
+.seznam__polozky {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Budoucí komponenta ShoppingItem */
+.polozka {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  min-width: 200px;
+  padding: 1rem 2rem;
+  border: 2px solid #547EA1;
+  border-radius: 1.2rem;
+  margin-bottom: 0.5rem;
+  background-color: #0A2236;
+  cursor: pointer;
+  box-shadow: 5px 6px 19px 3px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.polozka:hover {
+  background-color: #274D6D;
+  box-shadow: 5px 6px 19px 3px rgba(0, 0, 0, 0.431);
+}
+
+.polozka--koupeno::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  right: 1rem;
+  height: 0.5em;
+  border-top: 2px solid white;
+}
+
+.polozka__nazev {
+  font-weight: bold;
+}
+
+/* Budoucí komponenta AddShoppingItem */
+.formular {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 30%;
+  min-width: 200px;
+  margin: 2rem auto;
+}
+
+.formular__nazev-polozky,
+.formular__pocet-kusu {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 2px solid #547EA1;
+  margin-right: 5px;
+}
+
+.formular__nazev-polozky {
+  flex-basis: 45%;
+  min-width: 100px;
+}
+
+.formular__pocet-kusu {
+  flex-basis: 30%;
+  min-width: 70px;
+}
+
+.formular__nazev-polozky:focus,
+.formular__pocet-kusu:focus {
+  border-color: #0A2236;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.formular__tlacitko {
+  flex-basis: 20%;
+  cursor: pointer;
+  padding: 0.5rem;
+  min-width: 70px;
+  border-style: none;
+  background-color: #0A2236;
+  color: white;
+  font-weight: bold;
+  border-radius: 12px;
+}
+
+.formular__tlacitko:hover {
+  background-color: #061725;
+}
